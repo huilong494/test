@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING/DTD BEAN/EN"
+ "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+	 <bean id="helloBean" class=" main.java.com.testSpring.HelloBean">
+		 <property name="helloWord">
+		 	<value>Hello!Justin!</value> 
+		 </property>
+	 </bean>
+</beans> 
+
+<!-- 稍後您可以透過 setHelloWord()這個 Setter 來設定新的招呼語，不過並不是親自
+撰寫程式來作這些事，而是在組態檔案加以定義，由 Spring 來為您作設定的動作，接
+著可以撰寫 Bean 的定義檔案，定義檔案會告訴 Spring 容器，如何完成相依物件的關
+係注入等動作， Bean 定義檔的檔案名稱可以自由定義， 例 如這邊取名為
+beans-config.xml
+ -->
+ 
+ <!-- 在 Bean 定義檔中是以<beans>作為根節點，而使用<bean>來為每一個 Bean 進
+行設定，"id"屬性用以設定 Bean 的實例別名，稍後可以使用 id 來取得 Bean 的實例，
+class 屬性用來指定 Bean 的類別名稱，<property>標籤的 helloWord 設定了 Setter 的
+名稱（setHelloWorld），並在<value>標籤上設定了將注入的字串值。 -->
